@@ -15,7 +15,7 @@ class GeocodingController < ApplicationController
     # The street address that the user typed is in the variable @street_address.
     # ==========================================================================
 
-    @clean_street_address = @street_address.downcase.tr(' ', '+')
+    @clean_street_address = @street_address.tr(' ', '+')
 
     @url = "http://maps.googleapis.com/maps/api/geocode/json?address="+@clean_street_address
 
